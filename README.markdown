@@ -23,7 +23,7 @@ I personally add a little chunk of code to my `.bashrc` to create a `mkdjango` f
     mkdjango () {
         mkproject --no-site-packages --prompt=$1: $1 &&
         git init &&
-        git pull git://github.com/jordanorelli/Django-Skeleton.git master &&
+        git pull git://github.com/PixelEater/Django-Skeleton.git master &&
         rm README.markdown &&
         pip install -r requirements.txt &&
         ./manage.py new_secret &&
@@ -32,3 +32,5 @@ I personally add a little chunk of code to my `.bashrc` to create a `mkdjango` f
     }
 
 With that in my `~/.bashrc`, all I have to say is `mkdjango some_project_name` and I'm ready to rock.
+
+This is a fork of Jordan O'Relli's skeleton project, but with modifications for Django 1.4 and later.

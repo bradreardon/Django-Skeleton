@@ -10,3 +10,7 @@ def run_tests():
 def uname():
     """ Prints information about the host. """
     run("uname -a")
+
+def clean():
+    """ Cleans up *.*~ backup files. """
+    local("find ./ -name '*~' | xargs rm")

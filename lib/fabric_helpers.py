@@ -27,6 +27,8 @@ def _mk_sethost_fn(host_dicts):
             key_filename = host.get('key_filename')
             if key_filename:
                 env.key_filename.append(key_filename)
+            env.directory = host.get('directory', '.')
+            env.binprefix = host.get('binprefix', '') # We like virtualenvs where I come from.
         env.hosts = hoststrings
     return inner
 
